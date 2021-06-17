@@ -1,0 +1,34 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#outerCont{
+  width: 95vw;
+  height: 95vh;
+  border: 2px solid black;
+  margin: 10px auto;
+
+}
+
+.contItem{
+  text-align: center;
+  border: 2px solid black;
+}
+
+#innerCont1{
+  padding: 100px;
+}
+
+#innerCont2{
+  display: flex;
+}
+
+li{
+  padding: 10px;
+  list-style: none;
+  border: 2px solid black;
+}
+
+a{
+  text-decoration: none;
+}
