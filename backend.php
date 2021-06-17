@@ -1,29 +1,29 @@
 <?php
 
-use function PHPSTORM_META\type;
 
 include "config.php";
 
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
-$age = (int)$_POST["age"];
+$age = (float)$_POST["age"];
 $gender = $_POST["gender"];
 $city = $_POST["city"];
 $state = $_POST["state"];
 $country = $_POST["country"];
 $email = $_POST["email"];
-$phone = (int)$_POST["phone"];
+$phone = (float)$_POST["phone"];
 
-echo("<h1>backend page</h1>");
 var_dump($_POST);
-echo("my name is {$fname} {$lname}<br>");
-echo("i am {$age} years old and {$gender}<br>");
-echo("i live in {$city} {$state} ${country}<br>");
-echo("my email is $email and phone numebr is $phone<br>");
 
-echo(gettype($phone));
+// echo("data type ".gettype($c).$c);
+// echo("<br>data type ".gettype($phone));
+// echo("<br>data type ".gettype($fname));
+// echo("<br>data type ".gettype($lname));
 
-$qry = "INSERT INTO empData(empFname) VALUES('ramesh')";
+echo($gender[0]);
+
+
+$qry = "insert into empData(empFname,emplname,empAge,empGender,empCity,empState,empCountry,empEmail,empPhone) values('$fname','$lname',$age,'$gender[0]','$city','$state','$country','$email',$phone)";
 
 $res = mysqli_query($conn,$qry);
 
