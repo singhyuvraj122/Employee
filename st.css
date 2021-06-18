@@ -4,7 +4,6 @@
 }
 #outerCont{
   width: 95vw;
-  height: 95vh;
   border: 2px solid black;
   margin: 10px auto;
 
@@ -23,6 +22,10 @@
   display: flex;
 }
 
+#innerCont3{
+  overflow: auto;
+}
+
 li{
   padding: 10px;
   list-style: none;
@@ -31,4 +34,12 @@ li{
 
 a{
   text-decoration: none;
+}
+
+table{
+  width: 100%;
+  overflow: scroll;
+}
+td{
+  border: 2px solid blue;
 }

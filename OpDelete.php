@@ -2,32 +2,53 @@
 
 include "config.php";
 
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$email = $_POST["email"];
-
 var_dump($_POST);
 
-$qry = "select * from empdata where empFname = '$fname' AND emplname = '$lname' AND empEmail = '$email'";
+if(isset($_POST["deleteAll"])){
+  $fname = $_POST["fname"];
+  $lname = $_POST["lname"];
+  $email = $_POST["email"];
 
-$res = mysqli_query($conn,$qry);
+  $qry = "select * from empdata where empFname = '$fname' AND emplname = '$lname' AND empEmail = '$email'";
 
-var_dump($res);
-
-if($res->lengths > 0){
-  $qry = "DELETE FROM empdata WHERE empFname = '$fname' AND emplname = '$lname' AND empEmail = '$email'";
   $res = mysqli_query($conn,$qry);
+  var_dump($res);
+
+  if($res->num_rows > 0){
+    $qry = "DELETE FROM empdata WHERE empFname = '$fname' AND emplname = '$lname' AND empEmail = '$email'";
+    $res = mysqli_query($conn,$qry);
   
-  if($res){
-    echo("query done");
+    if($res){
+      echo("query done");
+    }
+    else{
+      echo("query not done");
+    }
   }
   else{
-    echo("query not done");
+    echo("field not found");
   }
 }
 else{
-  echo("field not found");
+  $qry = "select * from empdata";
+  
+  $res = mysqli_query($conn,$qry);
+  var_dump($res);
+  if(isset($_POST["deleteAll"])){
+    if($res->num_rows > 0){
+      $qry = "DELETE FROM empdata ";
+      $res = mysqli_query($conn,$qry);
+    
+      if($res){
+        echo("query done");
+      }
+      else{
+        echo("query not done");
+      }
+    }
+    else{
+      echo("field not found");
+    }
+  }
 }
-
-
 ?>
