@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="st.css">
+  </head>
   <body>
-    <div>
+    <?php 
+      include "navbar.php";
+    ?>
+    <div id="innerCont3">
       <form action="OpInsert.php" method="POST">
         <fieldset>
-          <legend>Employee Data Insert</legend>
           <table>
             <tr>
               <th>Name</th>
@@ -21,8 +25,8 @@
             </tr>
             <tr>
               <th>Gender</th>
-              <td><label><input name="gender" type="radio" value="male" required>Male</label></td>
-              <td><label><input name="gender" type="radio" value="female" required>Female</label></td>
+              <td><label><input name="gender" type="radio" value="male" required>Male</label>
+              <label><input name="gender" type="radio" value="female" required>Female</label></td>
             </tr>
             <tr>
               <th>City</th>
@@ -45,8 +49,9 @@
               <td><input name="phone" type="number" placeholder="employee phone" required></td>
             </tr>
             <tr>
-              <td><input name="submit" type="submit"></td>
-              <td><input name="reset" type="reset"></td>
+              <td colspan="2"><input name="submit" type="submit">
+              <input name="reset" type="reset">
+            </td>
           </tr>
           </table>
         </fieldset>

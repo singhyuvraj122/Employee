@@ -11,16 +11,9 @@ $res = mysqli_query($conn,$qry);
   </head>
   <body>
     <div id="outerCont">
-      <div id="innerCont2">
-        <div id="navTitle">
-          Employee Dashboard
-        </div>
-        <div id="navbar">
-          <li><a href="OpInsert.html">Insert Employee</a></>
-          <li><a href="OpUpdate.html">Update Employee</a></li>
-          <li><a href="OpDelete.html">Delete Employee</a></li>
-        </div>
-      </div>
+      <?php 
+        include "navbar.php";
+      ?>
       <div id="innerCont3">
         <table>
           <thead>
