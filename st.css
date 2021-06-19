@@ -34,6 +34,7 @@ li{
   list-style: none;
   text-decoration: none;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 a{
@@ -44,11 +45,11 @@ a{
 
 a:link {
   color: white;
-  background-color: #00c2d1;}
+  background-color: #16bac5;}
 
 a:visited{
   color: white;
-  background-color: #00c2d1;
+  background-color: #16bac5;
 }
 
 a:hover{
@@ -83,4 +84,33 @@ td{
   background-color: aquamarine;
 }
 
-input
+input[type=reset], input[type=submit] {
+  background-color: #16bac5;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+input[type=reset]:link, input[type=submit]:link{
+  color: white;
+  background-color: #16bac5;
+}
+
+input[type=reset]:visited, input[type=submit]:visited{
+  color: white;
+  background-color: #16bac5;
+}
+
+input[type=reset]:hover, input[type=submit]:hover{
+  color: #171D1C;
+  background-color: #EFE9F4;
+}
+
+input[type=reset]:active, input[type=submit]:active{
+  color: white;
+  background-color: #16bac5;
+}

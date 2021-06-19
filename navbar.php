@@ -1,3 +1,5 @@
+<?php?>
+
 <div id="innerCont2">
   <div id="navTitle">EMPLOYEE DASHBOARD</div>
   <div id="navbar">

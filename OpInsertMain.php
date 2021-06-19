@@ -49,8 +49,9 @@
               <td><input name="phone" type="number" placeholder="employee phone" required></td>
             </tr>
             <tr>
-              <td colspan="2"><input name="submit" type="submit">
-              <input name="reset" type="reset">
+              <td colspan="2">
+                <input name="submit" type="submit" value="SUBMIT">
+                <input name="reset" type="reset" value="RESET">
             </td>
           </tr>
           </table>
