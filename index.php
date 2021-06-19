@@ -1,6 +1,3 @@
-<?php
-include "config.php";
-?>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -20,30 +17,20 @@ include "config.php";
         </div>
       </div>
       <div class="contItem" id="innerCont3">
-      <table>
-            <tr>
-                <th>GFG UserHandle</th>
-                <th>Practice Problems</th>
-                <th>Coding Score</th>
-                <th>GFG Articles</th>
-            </tr>
-            <?php   // LOOP TILL END OF DATA 
-                while($rows=$result->fetch_assoc())
-                {
-            ?>
-            <tr>
-                <td><?php echo $rows['empFname'];?></td>
-                <td><?php echo $rows['problems'];?></td>
-                <td><?php echo $rows['score'];?></td>
-                <td><?php echo $rows['articles'];?></td>
-            </tr>
-            <?php
-                }
-            ?>
+        <table>
+          <tr>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>CITY</th>
+            <th>STATE</th>
+            <th>COUNTRY</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+          </tr>
         </table>
-
       </div>
     </div>
-    <script src="st.js"></script>
   </body>
 </html>
