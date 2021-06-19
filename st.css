@@ -57,10 +57,6 @@ a:active{
   background-color: #16bac5;
 }
 
-#innerCont3{
-  overflow: auto;
-}
-
-#mainRow{
-  background-color: #171d1c;
+tr{
+  background-color: aquamarine;
 }
