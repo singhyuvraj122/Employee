@@ -7,13 +7,17 @@
     <div>
       <?php
         include "navbar.php";
+        include "dispTable.php";
       ?>
       <div id="innerCont3">
         <form action="OpUpdate.php" method="POST">
           <table>
+            <tr id="tableHead">
+              <td colspan="2">UPDATE RECORD</td>
+            </tr>
             <tr>
               <th>Enter Email Of Employee</th>
-              <td><input name="email" type="email"></td>
+              <td><input name="email" type="email" placeholder="Employee Email"></td>
             </tr>
             <tr>
               <th>Select Option To Replace</th>
@@ -32,8 +36,8 @@
               </td>
             </tr>
             <tr>
-              <th>Enter New Value</th>
-              <td><input name="newValue" type="input"></td>
+              <th>Enter Value To Update</th>
+              <td><input name="newValue" type="text" placeholder="New Value"></td>
             </tr>
             <tr>
               <td colspan="2">

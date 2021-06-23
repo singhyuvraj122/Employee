@@ -6,27 +6,30 @@ $email = $_POST["email"];
 $columnName = $_POST["columnName"];
 $newValue = $_POST["newValue"];
 
-echo("email : $email");
-echo("<br>column : $columnName");
-echo("<br>value : $newValue<br>");
+function errorDisp()
+{
+  echo("<h1 style='text-align:center;'><i>Error</i> </h1><br>");
+  echo("<h2>INVALID INPUT</h2><br>");
+  echo("For HOMEPAGE, click <a href='index.php'>here</a>");
+}
 
 Switch($columnName){
   case "empFname":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "emplname":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empAge":
@@ -34,9 +37,9 @@ Switch($columnName){
     $qry = "UPDATE empdata SET $columnName = '$val' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empGender":
@@ -44,45 +47,45 @@ Switch($columnName){
     $qry = "UPDATE empdata SET $columnName = '$gen' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empCity":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empState":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empCountry":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empEmail":
     $qry = "UPDATE empdata SET $columnName = '$newValue' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
   case "empPhone":
@@ -90,11 +93,10 @@ Switch($columnName){
     $qry = "UPDATE empdata SET $columnName = '$phone' WHERE empEmail = '$email' ";
     $res = mysqli_query($conn,$qry);
     if($res){
-      echo "query executed";
+      header('Location: index.php');
     }else{
-      echo "query not executed";
+      errorDisp();
     }
     break;
 }
-
 ?>
