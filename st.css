@@ -76,12 +76,10 @@ table{
 
 th{
   padding: 20px;
-  background-color: cornflowerblue;
 }
 
 td{
   padding: 20px;
-  background-color: aquamarine;
 }
 
 input[type=reset], input[type=submit] {

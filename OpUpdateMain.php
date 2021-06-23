@@ -9,7 +9,7 @@
         include "navbar.php";
       ?>
       <div id="innerCont3">
-        <form action="OpUpdate.php" maethod="POST">
+        <form action="OpUpdate.php" method="POST">
           <table>
             <tr>
               <th>Enter Email Of Employee</th>
@@ -18,7 +18,7 @@
             <tr>
               <th>Select Option To Replace</th>
               <td>
-                <select name="newOpt">
+                <select name="columnName">
                   <option value="empFname">EMPLOYEE NAME</option>
                   <option value="emplname">EMPLOYEE SURNAME</option>
                   <option value="empAge">EMPLOYEE AGE</option>
